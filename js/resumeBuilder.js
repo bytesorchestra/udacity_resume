@@ -1,3 +1,13 @@
+//var formattedRole;
+//var formattedName;
+//var formattedMobile;
+//var formattedEmail;
+//var formattedGithub;
+//var formattedLocation;
+//var formattedLocation;
+//var formattedWelcomeMsg;
+
+
 // Object with BIO information
 
 var bio = {
@@ -6,18 +16,18 @@ var bio = {
         "role" : " Student @ Elium Academy",
         "contacts" : {
             
-                "mobile": "+32465995407",
-                "email": "e.genius@elium.academy",
-                "github": "bytesorchestra/udacity_resume",
-                "location": "Brussels"
+            "mobile": "+32465995407",
+            "email": "e.genius@elium.academy",
+            "github": "bytesorchestra/udacity_resume",
+            "location": "Brussels"
             
-                    },
+        },
         "welcomeMessage": "Your Door To NodeJS World",
         "skills": ['HTML', 'CSS', 'JAVASCRIPT', 'BOOTSRAP', 'NODE', 'REACT'],
-        "biopic": "url"
+        "biopic": "images/fry.jpg"
         //"display": function taking no parameters
     
-            }
+    };
 
 
 // Variables to replace %data% placeholders and pre/append to id header
@@ -48,5 +58,8 @@ $('#topContacts').append(formattedLocation);
 
 var formattedWelcomeMsg = HTMLwelcomeMsg.replace('%data%', bio['welcomeMessage']);
 $('#topContacts').append(formattedWelcomeMsg);
+
+var formattedBiopic = HTMLbioPic.replace('%data%', bio['biopic']);
+$('#topContacts').prepend(formattedBiopic);
 
 
