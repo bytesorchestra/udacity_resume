@@ -62,4 +62,4 @@ $('#topContacts').append(formattedWelcomeMsg);
 var formattedBiopic = HTMLbioPic.replace('%data%', bio['biopic']);
 $('#topContacts').prepend(formattedBiopic);
 
-
+// ...
