@@ -1,22 +1,22 @@
 // Object with BIO information
 
 var bio = {
-    
+
         "name" : "Gemius Simpson",
         "role" : " Student @ Elium Academy",
         "contacts" : {
-            
+
             "mobile": "+32465995407",
             "email": "g.simpson@elium.academy",
             "github": "bytesorchestra",
             "location": "Brussels"
-            
+
         },
         "welcomeMessage": "I Be Your Door To NodeJS   ",
         "skills": ["HTML", "CSS", "JAVASCRIPT", "BOOTSTRAP", "NODE", "REACT"],
         "biopic": "images/fry.jpg"
         //"display": function taking no parameters
-    
+
     };
 
 // role
@@ -31,38 +31,38 @@ $('#header').prepend(formattedName);
 
 // Work experience object:
 var work = {
-    
+
     "jobs" : [
-        
+
         {
-            
+
             "employer" : "Elium Academy",
             "title" : "Intern",
             "dates" : "2016 - 2016",
             "location" : "Brussel",
             "description" : "Learn NodeJS"
         },
-        
+
         {
-            
+
             "employer" : "eni",
             "title" : "Advisor Retention and Care",
             "dates" : "2012 - 2014",
             "location" : "Vilvoord",
             "description" : "Customer contract optimization"
         },
-        
+
         {
-            
+
             "employer" : "Smals",
             "title" : "Support Center eGov Financial Applications",
             "dates" : "2009 - 2010",
             "location" : "Brussls",
             "description" : "Technical support eGov fiscal declarations"
         }
-        
+
     ]
-    
+
 };
 
 var formattedTitle = HTMLworkTitle.replace('%data%', work.jobs[0]["employer"]);
@@ -73,7 +73,7 @@ $('#workExperience').append(formattedTitle);
 
 // Education history object:
 var education = {
-    
+
     "schools" : [
     {
         "school" : "Elium",
@@ -82,7 +82,7 @@ var education = {
         "graduation" : "2016",
         "courseInfo" : "We work from the inside out. Most cutting-edge tech businesses."
     },
-    
+
      {
         "school" : "Twentse College",
         "city" : "Hengelo",
@@ -90,34 +90,34 @@ var education = {
         "graduation" : "1998",
         "courseInfo" : "Major in Logistics and Supply Chain Management. Having the distinct advantage of being the only college in the Chicago area to offer this undergraduate degree, graduates of the major in logistics and supply chain management study the distribution, material purchasing, warehousing and production operations."
     }
- 
+
 ],
-    
+
 "onlineCourses" : [
-    
+
         {
             "title" : "Javascript Basics",
             "school" : "Udemy",
             "date" : "2015 - 2016",
             "url" : "url"
         },
-    
+
         {
             "title" : "Mean Stack",
             "school" : "Courera",
             "date" : "2015 - 2016",
             "url" : "url"
         },
-    
+
         {
             "title" : "Javascript Basics",
             "school" : "Udacity",
             "date" : "2015 - 2016",
             "url" : "url"
         }
-    
+
 ]
-    
+
 };
 
 var formattedSchool = HTMLschoolLocation.replace('%data%', education.school);
@@ -127,25 +127,25 @@ $('#main').append(formattedSchool);
 
 //Projects history object:
 var projects = {
-    
+
     "projects" : [
-        
+
         {
             "title" : "Project manager",
             "dates" : "2011 - 2013",
             "description" : "Online Service transfer",
             "image" : "#"
         },
-        
+
         {
             "title" : "CTO",
             "dates" : "2016 - 2016",
             "description" : "MenuApp",
             "image" : ["#"]
         }
-        
+
     ]
-    
+
 };
 
 
