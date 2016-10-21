@@ -1,4 +1,5 @@
 // Object with BIO information
+// And some more information
 
 var bio = {
 
@@ -65,10 +66,19 @@ var work = {
 
 };
 
-var formattedTitle = HTMLworkTitle.replace('%data%', work.jobs[0]["employer"]);
-console.log(HTMLworkTitle)
-console.log($('#workExperience'))
-$('#workExperience').append(formattedTitle);
+var workCount = work.jobs.length;
+var i;
+for (i=0; i < workCount; i+=1) {
+
+    $('#workExperience').append(HTMLworkEmployer.replace('%data%', work.jobs[i]["employer"]));
+    $('#workExperience').append(HTMLworkTitle.replace('%data%', work.jobs[i]["title"]));
+    $('#workExperience').append(HTMLworkDates.replace('%data%', work.jobs[i]["dates"]));
+    $('#workExperience').append(HTMLworkLocation.replace('%data%', work.jobs[i]["location"]));
+    $('#workExperience').append(HTMLworkDescription.replace('%data%', work.jobs[i]["description"]));
+   
+}
+
+
 
 
 // Education history object:
