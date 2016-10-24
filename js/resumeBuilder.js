@@ -66,16 +66,27 @@ var work = {
 
 };
 
-var workCount = work.jobs.length;
-var i;
-for (i=0; i < workCount; i+=1) {
+// Traverse jobs using 'For Loop'
+// var workCount = work.jobs.length;
+// var i;
+// for (i=0; i < workCount; i+=1) {
 
-    $('#workExperience').append(HTMLworkEmployer.replace('%data%', work.jobs[i]["employer"]));
-    $('#workExperience').append(HTMLworkTitle.replace('%data%', work.jobs[i]["title"]));
-    $('#workExperience').append(HTMLworkDates.replace('%data%', work.jobs[i]["dates"]));
-    $('#workExperience').append(HTMLworkLocation.replace('%data%', work.jobs[i]["location"]));
-    $('#workExperience').append(HTMLworkDescription.replace('%data%', work.jobs[i]["description"]));
+//     $('#workExperience').append(HTMLworkEmployer.replace('%data%', work.jobs[i]["employer"]));
+//     $('#workExperience').append(HTMLworkTitle.replace('%data%', work.jobs[i]["title"]));
+//     $('#workExperience').append(HTMLworkDates.replace('%data%', work.jobs[i]["dates"]));
+//     $('#workExperience').append(HTMLworkLocation.replace('%data%', work.jobs[i]["location"]));
+//     $('#workExperience').append(HTMLworkDescription.replace('%data%', work.jobs[i]["description"]));
    
+// }
+
+// Traverse jobs using 'For In Loop'
+var job;
+for (job in work.jobs) {
+    $('#workExperience').append(HTMLworkEmployer.replace('%data%', work.jobs[job]['employer']));
+    $('#workExperience').append(HTMLworkTitle.replace('%data%', work.jobs[job]['title']));
+    $('#workExperience').append(HTMLworkDates.replace('%data%', work.jobs[job]['dates']));
+    $('#workExperience').append(HTMLworkLocation.replace('%data%', work.jobs[job]['location']));
+    $('#workExperience').append(HTMLworkDescription.replace('%data%', work.jobs[job]['description']))
 }
 
 
@@ -179,13 +190,18 @@ $('#topContacts').append(formattedWelcomeMsg);
 var formattedBiopic = HTMLbioPic.replace('%data%', bio['biopic']);
 $('#topContacts').prepend(formattedBiopic);
 
-var totalSkills = bio.skills.length;
-var i;
-for (i = 0; i < totalSkills; i+=1){
+// Iterate skils
+if (bio.skills.length > 0) {
+
+    $('#header').append(HTMLskillsStart);
+    var totalSkills = bio.skills.length;
+    var i;
+    for (i = 0; i < totalSkills; i+=1){
     var formattedSkills = HTMLskills.replace('%data%', bio.skills[i]);
-    $('#topContacts').append(formattedSkills);
+    $('#skills').append(formattedSkills);
 }
 
+}
 
 
 // ...
