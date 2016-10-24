@@ -80,15 +80,32 @@ var work = {
 // }
 
 // Traverse jobs using 'For In Loop'
+// var job;
+// for (job in work.jobs) {
+//     
+//     $('#workExperience').append(HTMLworkEmployer.replace('%data%', work.jobs[job]['employer']));
+//     $('#workExperience').append(HTMLworkTitle.replace('%data%', work.jobs[job]['title']));
+//     $('#workExperience').append(HTMLworkDates.replace('%data%', work.jobs[job]['dates']));
+//     $('#workExperience').append(HTMLworkLocation.replace('%data%', work.jobs[job]['location']));
+//     $('#workExperience').append(HTMLworkDescription.replace('%data%', work.jobs[job]['description']))
+// }
+
+
+// 'for in loop' to iterate jobs
 var job;
 for (job in work.jobs) {
-    $('#workExperience').append(HTMLworkEmployer.replace('%data%', work.jobs[job]['employer']));
-    $('#workExperience').append(HTMLworkTitle.replace('%data%', work.jobs[job]['title']));
-    $('#workExperience').append(HTMLworkDates.replace('%data%', work.jobs[job]['dates']));
-    $('#workExperience').append(HTMLworkLocation.replace('%data%', work.jobs[job]['location']));
-    $('#workExperience').append(HTMLworkDescription.replace('%data%', work.jobs[job]['description']))
-}
+         $('#workExperience').append(HTMLworkStart);
+         //$('#workExperience').append(HTMLworkEmployer.replace('%data%', work.jobs[job]['employer']));
+         //$('#workExperience').append(HTMLworkTitle.replace('%data%', work.jobs[job]['title']));
+         //$('#workExperience').append(HTMLworkDates.replace('%data%', work.jobs[job]['dates']));
+         //$('#workExperience').append(HTMLworkLocation.replace('%data%', work.jobs[job]['location']));
+         //$('#workExperience').append(HTMLworkDescription.replace('%data%', work.jobs[job]['description']))
 
+         var formattedEmployerTitle = ((HTMLworkEmployer.replace('%data%', work.jobs[job]['employer']))) + (HTMLworkTitle.replace('%data%', work.jobs[job]['title']));
+         $('.work-entry:last').append(formattedEmployerTitle);
+
+
+}
 
 
 
