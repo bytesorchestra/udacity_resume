@@ -41,7 +41,8 @@ var work = {
             "title" : "Intern",
             "dates" : "2016 - 2016",
             "location" : "Brussel",
-            "description" : "Learn NodeJS"
+            "description" : "Trainee Full Stack Web Development with NodeJS",
+            
         },
 
         {
@@ -50,16 +51,18 @@ var work = {
             "title" : "Advisor Retention and Care",
             "dates" : "2012 - 2014",
             "location" : "Vilvoord",
-            "description" : "Customer contract optimization"
+            "description" : "Optimize customers contracts <br> Assist coordination to new connections",
+            
         },
 
         {
 
             "employer" : "Smals",
-            "title" : "Support Center eGov Financial Applications",
+            "title" : "Support Center eGov Applications",
             "dates" : "2009 - 2010",
-            "location" : "Brussls",
-            "description" : "Technical support eGov fiscal declarations"
+            "location" : "Brussels",
+            "description" : "Technical Support to businesses for eGov fiscal declarations",
+            
         }
 
     ]
@@ -103,8 +106,9 @@ for (job in work.jobs) {
 
          var formattedEmployerTitle = ((HTMLworkEmployer.replace('%data%', work.jobs[job]['employer']))) + (HTMLworkTitle.replace('%data%', work.jobs[job]['title']));
          $('.work-entry:last').append(formattedEmployerTitle);
-
-
+         $('.work-entry:last').append(HTMLworkDates.replace('%data%', work.jobs[job]['dates']));
+         $('.work-entry:last').append(HTMLworkDescription.replace('%data%', work.jobs[job]['description']))
+   
 }
 
 
